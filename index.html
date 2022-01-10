@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio Website - HTML,  CSS & JavaScript</title>
+    <!-- Here I have an images folder. Inside I have a random person image (not me) and I have some other images which we'll use as project images. They're thumbnails from this channel videos. You can check them out. -->
+    <!-- I'll provide the Source Code to the last part. -->
+</head>
+<body>
+    <nav>
+        <div class="nav_links">
+            <div class="left_links">
+                <a href="#">Home</a>
+                <a href="#about">About</a>
+                <a href="#work">Work</a>
+            </div>
+            <a href="#contact" class="contact-btn">Contact</a>
+        </div>
+        <div class="hamburger">
+            <div class="line line1"></div>
+            <div class="line line2"></div>
+            <div class="line line3"></div>
+        </div>
+    </nav>
+
+    <!-- Because I deleted the home ID earlier. Sorry -->
+    <main id="home">
+        <div class="content">
+            <h3>Hi, I'm ALB Dev.</h3>
+            <h1>Web Developer & UI/UX Designer</h1>
+            <p>Multi-disciplinary creator, currently working at computer science company <a href="#">sitename.com</a> Cityname, Countryname.</p>
+            <p>Proficient in HTML, CSS, JavaScript, Web Design, Web Development and Figma.</p>
+            <a href="#about" class="learn-more">Learn More <span class="symbol">&#x203A</span></a>
+        </div>
+        <!-- the image is too large -->
+        <img src="images/person.png" alt="Your Photo">
+    </main>
+    
+    <section id="about">
+        <div class="content">
+            <h1>Web Developer & UI/UX Designer</h1>
+            <p>Multi-disciplinary creator, currently working at computer science company <a href="#">sitename.com</a> Cityname, Countryname.</p>
+            <p>Proficient in HTML, CSS, JavaScript, Web Design, Web Development and Figma.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur dignissimos voluptatum quasi amet molestias, numquam porro commodi debitis harum earum!</p>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Obcaecati officiis assumenda exercitationem hic corporis esse nihil veniam? Placeat tempora velit provident distinctio voluptas molestiae accusamus autem sit, consequatur iusto dolores assumenda eligendi amet quidem rem aliquid incidunt voluptatibus, minus excepturi.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique ipsam maiores nisi consectetur debitis ad reiciendis quaerat veritatis delectus sed quos asperiores, vel numquam excepturi alias atque obcaecati dolores officia! <a href="#contact">Let's talk.</a></p>
+            <!-- here I also added an a tag which we'll redirect us to the contact page -->
+        </div>
+    </section>
+
+    <section id="work">
+        <h1>From simple JavaScript projects <br> to the dynamic ones.</h1>
+        <div class="content">
+            <article>
+                <div class="left">
+                    <h2>2.5D Parallax Effect</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/2.5DparallaxEffect.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Custom Upload Button</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/customUploadButton.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Funny JavaScript Project</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/funnyJSgameProject.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Simple Image Editor</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/imageEditor.jpg" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Liquid Transition Between Images</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/liquidTransitionBetweenImages.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Password Generator</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/passwordGenerator.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Star Rating Project</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/starRating.png" alt="">
+            </article>
+            <article>
+                <div class="left">
+                    <h2>Theme Switcher</h2>
+                    <a href="#">Preview the Project</a>
+                </div>
+                <img src="images/projects/themeSwitcher.jpg" alt="">
+            </article>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="content">
+            <h1>Let's talk.</h1>
+            <!-- since it is mailto it redirects you to the gmail app (inbox) -->
+            <p>Get in touch via the form below, or by emailing <a href="MAILTO:prodevs2004@gmail.com">prodevs2004@gmail.com</a>.</p>
+
+            <form>
+                <div class="form-group">
+                    <label>Name:</label>
+                    <input type="text" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                    <label>Email Address:</label>
+                    <input type="email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                    <label>Message:</label>
+                    <textarea placeholder="Enter your message"></textarea>
+                </div>
+                <button type="button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const hamburger = document.querySelector('.hamburger');
+        const nav_links_container = document.querySelector('.nav_links');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('x');
+            nav_links_container.classList.toggle('show_menu');
+        })
+
+        // this will select all the links inside the nav_links
+        const nav_links = document.querySelectorAll('.nav_links a');
+        nav_links.forEach(e => {
+            e.addEventListener('click', () => {
+                hamburger.classList.remove('x');
+                nav_links_container.classList.remove('show_menu');
+            })
+        })
+    </script>
+</body>
+</html>
+<!-- sorry for the lag..... -->
